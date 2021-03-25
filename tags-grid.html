@@ -81,7 +81,7 @@
 			})
 			
 			const markerHtmlStyles = `
-			  background-color: '#73aea8';
+			  background-color: #fdaf6f;
 			  width: 1rem;
 			  height: 1rem;
 			  display: block;
@@ -90,10 +90,10 @@
 			  position: relative;
 			  border-radius: .5rem .5rem 0;
 			  transform: rotate(45deg);
-			  opacity: 0.7;
+			  opacity: 0.8;
 			  border: 1px solid #FFFFFF`
 			  
-			var map = L.map('map').setView([40, -90], 4);
+			var map = L.map('map').setView([40, -20], 2);
 			var baselayer = L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 				maxZoom: 16,
 				minZoom: 2,
@@ -103,13 +103,9 @@
 				L.geoJson(data,{
 				pointToLayer: function(feature,latlng){
 					var thisIcon = L.divIcon({
-						html: '<span class="dot" style="background-color:#73aea8"></span>',
-						//className: 'dummy'
-						  className: "my-custom-pin",
-						  //iconAnchor: [0, 14],
-						  //labelAnchor: [-6, 0],
-						  //popupAnchor: [0, -36],
-						  //html: `<span style="${markerHtmlStyles};" />`
+						//html: '<span class="dot" style="background-color:#73aea8"></span>',
+						html: `<span style="${markerHtmlStyles};" />`,
+						className: "my-custom-pin"
 					});
 					var marker = L.marker(latlng,{icon: thisIcon});
 					marker.bindPopup('<font size="+2">'+feature.properties.name+'</font>'+'<br/><img src="'+feature.properties.image_url+'" width="250" onerror="this.style.display=\'none\'"/>');

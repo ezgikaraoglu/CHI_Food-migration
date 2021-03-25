@@ -2,5 +2,5 @@
 "type": "FeatureCollection", 
 "features": [
 {"type": "Feature", "id": 0, "properties": {"index": "1","name": "Molakhia", "image_url": "https://www.saveur.com/resizer/RvvJ2EBpfDUJ1chQSSxPx1Gpa14=/671x503/arc-anglerfish-arc2-prod-bonnier.s3.amazonaws.com/public/IKI3TYE6RT2PWSO5KLMHS4SBYI.jpg", "tags": ["Middle-eastern","Arab","Greens"]}, "geometry": { "type": "Point","coordinates": [35.54283728219194, 33.868670151210225] } },
-{"type": "Feature", "id": 1, "properties": {"index": "2","name": "Borek", "image_url": "", "tags": ["Vegetarian","Vegan","Pastry","Turkish","Middle-eastern"]}, "geometry": { "type": "Point","coordinates": [39.92312918678572, 32.860431426982316] } }
+{"type": "Feature", "id": 1, "properties": {"index": "2","name": "Borek", "image_url": "https://foto.haberler.com/haber/2020/11/25/borek-tarifleri-en-lezzetli-borek-tarifleri-13758966_5753_o.jpg", "tags": ["Vegetarian","Vegan","Pastry","Turkish","Middle-eastern"]}, "geometry": { "type": "Point","coordinates": [32.860431426982316, 39.92312918678572] } }
 ]}
