@@ -102,59 +102,8 @@
 		    $.getJSON("./data/all.geojson",function(data){
 				L.geoJson(data,{
 				pointToLayer: function(feature,latlng){
-					// Code to bind the features to their preview
-					var newItem = document.createElement("div");
-					newItem.className = "col-md-4 col-sm-12";
-					var singlePopularItem = document.createElement("div");
-					singlePopularItem.className = "single-popular-item";
-					var itemCoverImage = document.createElement("div");
-					itemCoverImage.className = "item-cover-image bg-cover";
-					itemCoverImage.style = "background-image: url('"+feature.properties.image_url+"')";
-					var tagsDiv = document.createElement("div");
-					tagsDiv.className = "tags"
-					var  tagsTable = document.createElement("ul");
-					for (var ii = 0; ii < feature.properties.tags.length; ii++) {
-						var tag = document.createElement("li");
-						tag.innerHTML = `<a href="#">`+feature.properties.tags[ii]+`</a>`;
-						tagsTable.appendChild(tag);
-					}
-					tagsDiv.innerHTML = `<a href="#" class="btn-wishlist"><i class="far fa-heart"></i></a>`;
-					tagsDiv.appendChild(tagsTable);
-					itemCoverImage.appendChild(tagsDiv);
-					singlePopularItem.appendChild(itemCoverImage);
-					var itemCategory = document.createElement("div");
-					itemCategory.className="item-category";
-					itemCategory.inerHTML = `<div class="cat-icon"><img src="assets/img/cafe.png"></div>`
-					singlePopularItem.appendChild(itemCategory);
-					var itemContent = document.createElement("div");
-					itemContent.className="item-content";
-					itemContent.innerHTML = `<h4><a href="listing-single-details.html">`+feature.properties.name+`</a></h4>
-						        <div class="item-feedback">
-                                <ul>
-                                    <li><i class="fas fa-globe"></i></li>
-                                    <li><i class="fas fa-globe"></i></li>
-                                </ul>
-                                2 versions
-                            </div>`
-					var itemDetails = document.createElement("div");
-					itemDetails.className = "item-details"
-					var itemMeta = document.createElement("div");
-					itemMeta.className="item-meta-data open";
-					itemMeta.innerHTML = `
-					             <ul>
-                                    <li><i class="fas fa-map-marker-alt"></i><span> Favorite: </span>
-										<a href="https://woodysoasis.com/">Woody's Oasis</a></li>
-                                    <li>By<a href="#"> Sari</a></li>
-                                </ul>
-					`
-					itemContent.appendChild(itemMeta);
-					singlePopularItem.appendChild(itemContent);
-					//singlePopularItem.appendChild(itemDetails);
-					newItem.appendChild(singlePopularItem);
-					document.getElementById("dish-preview").appendChild(newItem);
-					console.log(feature.properties.name);
-					///////////////////
 					var thisIcon = L.divIcon({
+						//html: '<span class="dot" style="background-color:#73aea8"></span>',
 						html: `<span style="${markerHtmlStyles};" />`,
 						className: "my-custom-pin"
 					});
@@ -303,7 +252,7 @@
     <!-- single deatils content wrapper start -->
     <section class="tag-item-section section-padding page-bg">
         <div class="container">
-            <div id="dish-preview" class="row">
+            <div class="row">
                 <div class="col-md-4 col-sm-12">
                 <!-- single item box start -->
                     <div class="single-popular-item">
@@ -353,7 +302,252 @@
                     </div>
                 </div>
                 <!-- single item box end -->
-			</div>
+                <div class="col-md-4 col-sm-12">
+                <!-- single item box start -->
+                    <div class="single-popular-item">
+                        <div class="item-cover-image bg-cover" style="background-image: url('assets/img/hotel1.jpg')">
+                            <div class="tags">
+                                <ul>
+                                    <li><a href="#">Rent</a></li>
+                                    <li><a href="#">Hotel, House</a></li>
+                                </ul>
+                                <a href="#" class="btn-wishlist"><i class="far fa-heart"></i></a>
+                            </div>
+                            <div class="item-details">
+                                <div class="brand">
+                                    <img src="assets/img/avatar/author2.png" alt="listico">
+                                    <span class="item-price">$890/hotel</span>
+                                </div>
+                                <div class="item-category">
+                                    <div class="cat-icon">
+                                        <img src="assets/img/hotel.png" alt="listico">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item-content">
+                            <h4><a href="listing-single-details.html">Beautiful City Hostel & Hotel</a></h4>
+                            <div class="item-feedback">
+                                <ul>
+                                    <li><i class="fas fa-star"></i></li>
+                                    <li><i class="fas fa-star"></i></li>
+                                    <li><i class="fas fa-star"></i></li>
+                                    <li><i class="fas fa-star"></i></li>
+                                    <li><i class="fas fa-star"></i></li>
+                                </ul>
+                                Average, (4 Reviwer)
+                            </div>
+                            <div class="item-store-location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                7567 Ground Moorabool, Upper East Side
+                            </div>
+                            <div class="item-meta-data open">
+                                <ul>
+                                    <li><i class="far fa-clock"></i><span>Open</span> until 10:00 AM</li>
+                                    <li>By<a href="#">admin</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                <!-- single item box end -->
+                </div>
+                <div class="col-md-4 col-sm-12">
+                <!-- single item box start -->
+                    <div class="single-popular-item">
+                        <div class="item-cover-image bg-cover" style="background-image: url('assets/img/resto.jpg')">
+                            <div class="tags">
+                                <ul>
+                                    <li><a href="#">Restourant</a></li>
+                                    <li><a href="#">sale, food</a></li>
+                                </ul>
+                                <a href="#" class="btn-wishlist"><i class="far fa-heart"></i></a>
+                            </div>
+                            <div class="item-details">
+                                <div class="brand">
+                                    <img src="assets/img/avatar/5.jpg" alt="listico">
+                                    <span class="item-price">$620/restourant</span>
+                                </div>
+                                <div class="item-category">
+                                    <div class="cat-icon">
+                                        <img src="assets/img/cafe.png" alt="listico">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item-content">
+                            <h4><a href="listing-single-details.html">Luxury Restourant</a></h4>
+                            <div class="item-feedback">
+                                <ul>
+                                    <li><i class="fas fa-star"></i></li>
+                                    <li><i class="fas fa-star"></i></li>
+                                    <li><i class="fas fa-star"></i></li>
+                                    <li><i class="fas fa-star"></i></li>
+                                    <li><i class="fas fa-star"></i></li>
+                                </ul>
+                                Great, (9 Reviwer)
+                            </div>
+                            <div class="item-store-location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                 27th Brooklyn New York, NY 10065
+                            </div>
+                            <div class="item-meta-data open">
+                                <ul>
+                                    <li><i class="far fa-clock"></i><span>Open</span> until 8:00 AM</li>
+                                    <li>By<a href="#">admin</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                <!-- single item box end -->
+                </div>
+                <div class="col-md-4 col-sm-12">
+                <!-- single item box start -->
+                    <div class="single-popular-item">
+                        <div class="item-cover-image bg-cover" style="background-image: url('assets/img/house.jpg')">
+                            <div class="tags">
+                                <ul>
+                                    <li><a href="#">Sale</a></li>
+                                    <li><a href="#">Guests House</a></li>
+                                </ul>
+                                <a href="#" class="btn-wishlist"><i class="far fa-heart"></i></a>
+                            </div>
+                            <div class="item-details">
+                                <div class="brand">
+                                    <img src="assets/img/avatar/author.png" alt="listico">
+                                    <span class="item-price">$955/house</span>
+                                </div>
+                                <div class="item-category">
+                                    <div class="cat-icon">
+                                        <img src="assets/img/hotel.png" alt="listico">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item-content">
+                            <h4><a href="listing-single-details.html">Apricot West Britford Arch</a></h4>
+                            <div class="item-feedback">
+                                <ul>
+                                    <li><i class="fas fa-star"></i></li>
+                                    <li><i class="fas fa-star"></i></li>
+                                    <li><i class="fas fa-star"></i></li>
+                                    <li><i class="fas fa-star"></i></li>
+                                    <li><i class="fas fa-star"></i></li>
+                                </ul>
+                                Good, (8 Reviwer)
+                            </div>
+                            <div class="item-store-location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                 32 Dhanmondhu - Dhakan
+                            </div>
+                            <div class="item-meta-data open">
+                                <ul>
+                                    <li><i class="far fa-clock"></i><span>Open</span> until 10:00 AM</li>
+                                    <li>By<a href="#">admin</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                <!-- single item box end -->
+                </div>
+                <div class="col-md-4 col-sm-12">
+                <!-- single item box start -->
+                    <div class="single-popular-item">
+                        <div class="item-cover-image bg-cover" style="background-image: url('assets/img/resto.jpg')">
+                            <div class="tags">
+                                <ul>
+                                    <li><a href="#">Restourant</a></li>
+                                    <li><a href="#">sale, food</a></li>
+                                </ul>
+                                <a href="#" class="btn-wishlist"><i class="far fa-heart"></i></a>
+                            </div>
+                            <div class="item-details">
+                                <div class="brand">
+                                    <img src="assets/img/avatar/5.jpg" alt="listico">
+                                    <span class="item-price">$620/restourant</span>
+                                </div>
+                                <div class="item-category">
+                                    <div class="cat-icon">
+                                        <img src="assets/img/hotel.png" alt="listico">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item-content">
+                            <h4><a href="listing-single-details.html">Luxury Restourant</a></h4>
+                            <div class="item-feedback">
+                                <ul>
+                                    <li><i class="fas fa-star"></i></li>
+                                    <li><i class="fas fa-star"></i></li>
+                                    <li><i class="fas fa-star"></i></li>
+                                    <li><i class="fas fa-star"></i></li>
+                                    <li><i class="fas fa-star"></i></li>
+                                </ul>
+                                Great, (9 Reviwer)
+                            </div>
+                            <div class="item-store-location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                 27th Brooklyn New York, NY 10065
+                            </div>
+                            <div class="item-meta-data open">
+                                <ul>
+                                    <li><i class="far fa-clock"></i><span>Open</span> until 8:00 AM</li>
+                                    <li>By<a href="#">admin</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- single item box end -->
+                </div>
+                <div class="col-md-4 col-sm-12">
+                <!-- single item box start -->
+                    <div class="single-popular-item">
+                        <div class="item-cover-image bg-cover" style="background-image: url('assets/img/hotel1.jpg')">
+                            <div class="tags">
+                                <ul>
+                                    <li><a href="#">hotel</a></li>
+                                    <li><a href="#">guest</a></li>
+                                </ul>
+                                <a href="#" class="btn-wishlist"><i class="far fa-heart"></i></a>
+                            </div>
+                            <div class="item-details">
+                                <div class="brand">
+                                    <img src="assets/img/avatar/5.jpg" alt="listico">
+                                    <span class="item-price">$1220/hotel</span>
+                                </div>
+                                <div class="item-category">
+                                    <div class="cat-icon">
+                                        <img src="assets/img/hotel1.jpg" alt="listico">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item-content">
+                            <h4><a href="listing-single-details.html">VIP Hotel Blue</a></h4>
+                            <div class="item-feedback">
+                                <ul>
+                                    <li><i class="fas fa-star"></i></li>
+                                    <li><i class="fas fa-star"></i></li>
+                                    <li><i class="fas fa-star"></i></li>
+                                    <li><i class="fas fa-star"></i></li>
+                                    <li><i class="fas fa-star"></i></li>
+                                </ul>
+                                Great, (9 Reviwer)
+                            </div>
+                            <div class="item-store-location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                 West Aruail 3034 BB Dhaka
+                            </div>
+                            <div class="item-meta-data open">
+                                <ul>
+                                    <li><i class="far fa-clock"></i><span>Open</span> until 8:00 AM</li>
+                                    <li>By<a href="#">admin</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- single item box end -->
+                </div>
+            </div>
             <div class="load-ajx text-center">
                 <a href="#" class="btn-loadmore">Load More</a>
             </div>

@@ -624,6 +624,7 @@ a.btn-wishlist {
     transition: all .4s linear;
     text-transform: capitalize;
     margin-right: 5px;
+    margin-top: 3px;
 }
 .item-cover-image::before {
     position: absolute;
