@@ -285,6 +285,8 @@ h2 {
 nav {
     padding: 0 !important;
     margin: 0 !important;
+    position: relative;
+    top: 30%;
 }
 
  /* go to  up */
@@ -412,7 +414,7 @@ a.btn-booking-start {
     border-style: solid;
     border-radius: 2px;
     display: inline-block;
-    padding: 12px 30px;
+    padding: 12px 24px;
     color: #E58D31;
     font-weight: 500;
     margin-left: 35px;
