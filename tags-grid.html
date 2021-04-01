@@ -95,6 +95,19 @@
 			  transform: rotate(45deg);
 			  opacity: 0.8;
 			  border: 1px solid #FFFFFF`
+			  
+			 const highlightedMarkerHtmlStyles = `
+			  background-color: #FFFFFF;
+			  width: 1rem;
+			  height: 1rem;
+			  display: block;
+			  left: -.1rem;
+			  top: -.6rem;
+			  position: relative;
+			  border-radius: .5rem .5rem 0;
+			  transform: rotate(45deg);
+			  opacity: 0.8;
+			  border: 1px solid #d34751`
 			
 			//var rainbow = new Rainbow(); 
 			//rainbow.setNumberRange(1,5);
@@ -102,7 +115,8 @@
 			function addtags(tag){
 				var newTag = document.createElement("a");
 				newTag.setAttribute('href', '#');
-				newTag.innerHTML = tag
+				newTag.setAttribute('onclick', 'MyFunction(\"'+tag+'\");');
+				newTag.innerHTML = tag;
 				document.getElementById("tagList").appendChild(newTag);
 			}
 			var tag_lst = new Set();
@@ -113,7 +127,7 @@
 				attribution: 'Map data &copy; <a href="http://openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 		    }).addTo(map);
 		    $.getJSON("./data/all.geojson",function(data){
-				L.geoJson(data,{
+				myL= L.geoJson(data,{
 				pointToLayer: function(feature,latlng){
 					// Code to bind the features to their preview
 					var newItem = document.createElement("div");
@@ -142,8 +156,9 @@
 					singlePopularItem.appendChild(itemCategory);
 					var itemContent = document.createElement("div");
 					itemContent.className="item-content";
-					itemContent.innerHTML = `<h4><a href="listing-single-details.html">`+feature.properties.name+`</a></h4>
-						        <div class="item-feedback">
+					itemContent.innerHTML = `<h4><a href="listing-single-details.html">`+feature.properties.name
+						+`</a></h4>
+						    <div class="item-feedback">
                                 <ul>
                                     <li><i class="fas fa-globe"></i></li>
                                     <li><i class="fas fa-globe"></i></li>
@@ -169,7 +184,7 @@
 					console.log(feature.properties.name);
 					///////////////////
 					var thisIcon = L.divIcon({
-						html: `<span style="${markerHtmlStyles};" />`,
+						html: `<span id="${feature.properties.name+'_pin'}" style="${markerHtmlStyles};" />`,
 						className: "my-custom-pin"
 					});
 					var marker = L.marker(latlng,{icon: thisIcon});
@@ -180,6 +195,19 @@
 			   tag_lst.forEach(addtags);
 			});
 		})
+	</script>
+	<script>		  
+	function MyFunction(val) {
+		console.log(myL._layers);
+		Object.keys(myL._layers).forEach(function(key){
+			layer = myL._layers[key];
+			if (layer.feature.properties.tags.includes(val)) {
+				document.getElementById(layer.feature.properties.name+'_pin').style.backgroundColor = "#fb3d28";
+			} else {
+				document.getElementById(layer.feature.properties.name+'_pin').style.backgroundColor = "#fdaf6f";
+			}
+		})
+	}
 	</script>
 </head>
 
@@ -250,7 +278,9 @@
                                  <!--
                                  <li><a href="explors-map-sidebar.html">Property</a></li>
                                  <li><a href="explors-map-sidebar.html">Find</a></li>
+                                 -->
                                  <li><a href="contact.html">Contact</a></li>
+                                <!--
                                 <li><a href="#">Pages</a>
                                     <ul class="submenu">
                                         <li><a href="login.html">login</a></li>
@@ -260,6 +290,7 @@
                                         <li><a href="contact.html">contact</a></li>
                                     </ul> 
                                 </li>
+                                -->
                             </ul>
                             <a href="#" class="btn-booking-start">Submit a Recipe</a>
                         </nav>
