@@ -3,4 +3,8 @@
 "features": [
 {"type": "Feature", "id": 0, "properties": {"index": "1","name": "Molakhia", "image_url": "https://www.saveur.com/resizer/RvvJ2EBpfDUJ1chQSSxPx1Gpa14=/671x503/arc-anglerfish-arc2-prod-bonnier.s3.amazonaws.com/public/IKI3TYE6RT2PWSO5KLMHS4SBYI.jpg", "tags": ["Middle-eastern","Arab","Greens"]}, "geometry": { "type": "Point","coordinates": [35.54283728219194, 33.868670151210225] } },
 {"type": "Feature", "id": 1, "properties": {"index": "2","name": "Borek", "image_url": "https://foto.haberler.com/haber/2020/11/25/borek-tarifleri-en-lezzetli-borek-tarifleri-13758966_5753_o.jpg", "tags": ["Vegetarian","Vegan","Pastry","Turkish","Middle-eastern"]}, "geometry": { "type": "Point","coordinates": [32.860431426982316, 39.92312918678572] } }
+{"type": "Feature", "id": 2, "properties": {"index": "3","name": "Baklawa", "image_url": "https://shatila.com/blog/wp-content/uploads/2017/03/0616.jpg", "tags": ["Middle-eastern","Dessert"]}, "geometry": { "type": "Point","coordinates": [35.50283728219194, 33.778670151210225] } },
+{"type": "Feature", "id": 3, "properties": {"index": "4","name": "Baklawa", "image_url": "https://st2.myideasoft.com/idea/gx/27/myassets/products/487/fistikli-hisir-baklava-15-jpg.jpeg?revision=1612026168", "tags": ["Middle-eastern","Dessert"]}, "geometry": { "type": "Point","coordinates": [37.9167467, 40.2227753] } },
+
 ]}
+
