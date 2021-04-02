@@ -9,3 +9,8 @@ Website: https://ezgikaraoglu.github.io/CHI_Food-migration/tags-grid.html
 # submission form (office-forms format)
 
 Website: https://forms.office.com/r/QYAM4tyN0H
+
+# notes from 02/04/21
+colors are better to be changed from reds and greens to sth else for more accessibility.
+pictures should be cited-ethan will share more ideas on how to put citation.
+--is there any way to put our authentic pictures and manuscripted recipes from the family?--
