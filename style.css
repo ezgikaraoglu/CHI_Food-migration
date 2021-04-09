@@ -636,7 +636,7 @@ a.btn-wishlist {
     z-index: -1;
 }
 .tags ul li:first-child a {
-    background: #33cc66;
+    background: #6699ff;
 }
 .item-meta-data ul li:first-child {
     margin-right: 25px;
@@ -648,7 +648,7 @@ a.btn-wishlist {
     margin-right: 15px;
 }
 .item-meta-data.open li span {
-    color: #33cc66;
+    color: #6699ff;
 }
 .item-meta-data li i {
     padding-right: 5px;
@@ -1061,10 +1061,10 @@ a.btn-button {
     transition: all .4s;
 }
 .our-experience .col-xl-6:nth-child(2n) span {
-    background: #33cc66 !important;
+    background: #6699ff !important;
 }
 .single-experiance:hover span {
-    background: #33cc66;
+    background: #6699ff;
 }
 .single-experiance h3, .single-experiance h3 a {
     margin-top: 35px;
@@ -1073,7 +1073,7 @@ a.btn-button {
     transition: all .4s;
 }
 .single-experiance:hover h3, .single-experiance:hover h3 a {
-    color: #33cc66;
+    color: #6699ff;
 }
 .top-place-widgets .item-store-location {
     font-size: 14px;
@@ -1548,11 +1548,11 @@ a.btn-loadmore:hover {
 }
 .tags li a:hover, #scrollUp:hover, .login-form form .btn-submit:hover,
 .booking-area form .btn-submit:hover {
-    background: #33cc66;
+    background: #6699ff;
     color: #fff;
 }
 a.btn-wishlist:hover, .item-meta-data li a:hover, .social-link-share li a:hover {
-    color: #33cc66;
+    color: #6699ff;
 }
 .item-content h4 a:hover,
 .login-form form a:hover {
