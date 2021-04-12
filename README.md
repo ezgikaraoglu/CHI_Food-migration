@@ -5,6 +5,8 @@ Website: https://ezgikaraoglu.github.io/CHI_Food-migration/tags-grid.html
 ## Developer notes
 - Color Scheme: adc25d,753d3,d34751,e50d31
 
+##Recipes shared excel file
+https://michiganstate-my.sharepoint.com/:x:/r/personal/bakabasm_msu_edu/_layouts/15/Doc.aspx?sourcedoc=%7B4D1D091A-ED5B-4891-B648-E80CC2CB9113%7D&file=Recipes.xlsx&action=default&mobileredirect=true
 
 # submission form (office-forms format)
 
