@@ -121,6 +121,8 @@
 			}
 			var tag_lst = new Set();
 			var map = L.map('map').setView([40, -20], 2);
+			markersLayer = new L.FeatureGroup();
+		    var itemMarkers = new L.FeatureGroup();
 			var baselayer = L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 				maxZoom: 9,
 				minZoom: 3,
@@ -128,6 +130,29 @@
 		    }).addTo(map);
 		    $.getJSON("./data/all.geojson",function(data){
 				myL= L.geoJson(data,{
+				  onEachFeature: function onEachFeature(feature,layer){
+					layer.on('click', function (e) {
+						var featureGeo = feature.properties.name+'.geojson';
+						console.log(featureGeo);
+						markersLayer.clearLayers();
+						$.getJSON("./data/Mantu.geojson",function(data){
+							myL2 = L.geoJson(data,{
+								pointToLayer: function(feature,latlng){
+									console.log('here!');
+									var thisIcon = L.divIcon({
+										html: `<span id="${feature.properties.AlternativeName+'_pin'}" style="${markerHtmlStyles}; background-color:#9999ff;" />`,
+										className: "item-custom-pin"
+									});
+									console.log('here!!');
+									var marker = L.marker(latlng,{icon: thisIcon});
+									marker.bindPopup('<font size="+2">hi</font>');
+									return marker;
+								}
+							}).addTo(markersLayer);
+						})
+						map.addLayer(markersLayer);
+					})
+			      },
 				pointToLayer: function(feature,latlng){
 					// Code to bind the features to their preview
 					var newItem = document.createElement("div");
@@ -143,7 +168,7 @@
 					for (var ii = 0; ii < feature.properties.tags.length; ii++) {
 						tag_lst.add(feature.properties.tags[ii]);
 						var tag = document.createElement("li");
-						console.log(feature.properties.tags[ii]);
+						<!--console.log(feature.properties.tags[ii]);-->
 						tag.innerHTML = `<a href="#" onclick="MyFunction('${feature.properties.tags[ii]}');">${feature.properties.tags[ii]}</a>`;
 						tagsTable.appendChild(tag);
 					}
@@ -183,7 +208,7 @@
 					//singlePopularItem.appendChild(itemDetails);
 					newItem.appendChild(singlePopularItem);
 					document.getElementById("dish-preview").appendChild(newItem);
-					console.log(feature.properties.name);
+					<!--console.log(feature.properties.name);-->
 					///////////////////
 					var thisIcon = L.divIcon({
 						html: `<span id="${feature.properties.name+'_pin'}" style="${markerHtmlStyles};" />`,
@@ -200,7 +225,8 @@
 	</script>
 	<script>		  
 	function MyFunction(val) {
-		console.log(myL._layers);
+		//console.log(markersLayer);
+		markersLayer.clearLayers();
 		Object.keys(myL._layers).forEach(function(key){
 			layer = myL._layers[key];
 			if (layer.feature.properties.tags.includes(val)) {
