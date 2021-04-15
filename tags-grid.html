@@ -132,10 +132,10 @@
 				myL= L.geoJson(data,{
 				  onEachFeature: function onEachFeature(feature,layer){
 					layer.on('click', function (e) {
-						var featureGeo = feature.properties.name+'.geojson';
+						var featureGeo = "./data/"+feature.properties.name+".geojson";
 						console.log(featureGeo);
 						markersLayer.clearLayers();
-						$.getJSON("./data/Mantu.geojson",function(data){
+						$.getJSON(featureGeo,function(data){
 							myL2 = L.geoJson(data,{
 								pointToLayer: function(feature,latlng){
 									console.log('here!');
@@ -218,7 +218,15 @@
 						className: "my-custom-pin"
 					});
 					var marker = L.marker(latlng,{icon: thisIcon});
+					<!--
 					marker.bindPopup('<font size="+2">'+feature.properties.name+'</font>'+'<br/><img src="'+feature.properties.image_url+'" width="250" onerror="this.style.display=\'none\'"/>');
+					-->
+					marker.on('mouseover', function(e) {
+						var popup = L.popup()
+					   .setLatLng(e.latlng) 
+					   .setContent('<font size="+2">'+feature.properties.name+'</font>'+'<br/><img src="'+feature.properties.image_url+'" style="  width: 200px; height: 100px; object-fit: contain;" onerror="this.style.display=\'none\'"/>')
+					   .openOn(map)
+					});
 					return marker;
 			   }
 			   }).addTo(map);
@@ -289,12 +297,14 @@
                     <div class="col-md-9 d-none d-lg-block text-lg-right">
                         <nav id="responsive-menu" class="main-menu">
                             <ul class="menu-items">
-                                <li><a href="#">home</a>
+                                <li><a href="tags-grid.html">home</a>
+                                <!--
                                     <ul class="submenu">
                                         <li><a href="index.html">Home One</a></li>
                                         <li><a href="index-2.html">Home Two</a></li>
                                         <li><a href="index-3.html">Home Three</a></li>
-                                    </ul>    
+                                    </ul>
+                                -->  
                                 </li>
                                  <li><a href="about.html">about</a></li>
                                  <li><a href="authenticity.html">"Authenticity"</a>
