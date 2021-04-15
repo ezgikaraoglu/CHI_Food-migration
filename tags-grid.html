@@ -139,8 +139,11 @@
 							myL2 = L.geoJson(data,{
 								pointToLayer: function(feature,latlng){
 									console.log('here!');
-									var thisIcon = L.divIcon({
-										html: `<span id="${feature.properties.AlternativeName+'_pin'}" style="${markerHtmlStyles}; background-color:#9999ff;" />`,
+									var thisIcon = L.icon({
+										//html: `<span id="${feature.properties.AlternativeName+'_pin'}" style="${markerHtmlStyles}; background-color:#9999ff;" />`,
+										iconUrl: 'assets/img/fork-and-knife.png',
+										iconSize:     [20, 20], // size of the icon
+										popupAnchor:  [0, 0], // point from which the popup should open relative to the iconAnchor
 										className: "item-custom-pin"
 									});
 									console.log('here!!');
@@ -320,7 +323,7 @@
                                 </li>
                                 -->
                             </ul>
-                            <a href="#" class="btn-booking-start">Submit a Recipe</a>
+                            <a href="https://forms.office.com/r/QYAM4tyN0H" class="btn-booking-start">Submit a Recipe</a>
                         </nav>
                     </div> <!-- /. col-md-9 d-none d-lg-block -->
 
