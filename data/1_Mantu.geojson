@@ -1,0 +1,6 @@
+{
+"type": "FeatureCollection", 
+"features": [
+{"type": "Feature", "id": 0, "properties": {"AlternativeName": "Mantu", "Occasion": "", "DietaryChoice": "", "Source": "Hina Popal", "PhotoLink": "https://853004.smushcdn.com/1928416/wp-content/uploads/2017/10/Afghan-Mantu-at-TasteOfThePlace.com-inline-5.jpg"}, "geometry": { "type": "Point","coordinates": [69.1776838, 34.5260109] } },
+{"type": "Feature", "id": 1, "properties": {"AlternativeName": "Manti", "Occasion": "", "DietaryChoice": "Vegetarian, Vegan", "Source": "Sevinc Karaoglu", "PhotoLink": "http://karmatetr.com/Content/Site/images/menus/ispa193105399.jpg"}, "geometry": { "type": "Point","coordinates": [35.4874516, 38.7225274] } }
+]}
