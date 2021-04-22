@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- ======== Page title ============ -->
-    <title>Molakhia - Migrating Cuisines HTML Template</title>
+    <title>Molakhia-Migrating Cuisine</title>
     
     <!-- ========== Favicon Icon ========== -->
     <link rel="shortcut icon" href="assets/img/favicon.png">
@@ -25,10 +25,10 @@
     <link rel="stylesheet" href="assets/css/magnific-popup.css">
     <!--  owl carosuel css plugins -->
     <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
-    <!--  meanmenu css plugins -->
-    <link rel="stylesheet" href="assets/css/meanmenu.min.css">
     <!--  owl theme css plugins -->
     <link rel="stylesheet" href="assets/css/owl.theme.css">
+    <!--  meanmenu css plugins -->
+    <link rel="stylesheet" href="assets/css/meanmenu.min.css">    
     <!--  Bootstrap css plugins -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <!-- template main style css file -->
@@ -68,9 +68,6 @@
                         <div class="top-bar-right">
                             <div class="user-setting">
                                 <ul>
-                                    <!---
-                                    <li><a href="#"><i class="fas fa-sign-out-alt"></i>Login</a></li>
-                                    --->
                                     <li><a href="#"><i class="fas fa-user"></i>Contact Us</a></li>
                                 </ul>
                             </div>
@@ -91,31 +88,22 @@
                     <div class="col-md-9 d-none d-lg-block text-lg-right">
                         <nav id="responsive-menu" class="main-menu">
                             <ul class="menu-items">
-                                <li><a href="tags-grid.html">home</a>
-                                <!--
+                                <li><a href="#">home</a>
                                     <ul class="submenu">
-                                        <li><a href="index.html">Home One</a></li>
-                                        <li><a href="index-2.html">Home Two</a></li>
-                                        <li><a href="index-3.html">Home Three</a></li>
-                                    </ul>
-                                -->  
+                                       
+                                    </ul>    
                                 </li>
                                  <li><a href="about.html">about</a></li>
-                                 <li><a href="authenticity.html">"Authenticity"</a>
-                                   <!--
+                                 <li><a href="listing-single-details.html">Listing</a>
                                     <ul class="submenu">
                                         <li><a href="tags.html">tags</a></li>
                                         <li><a href="tags-grid.html">tags grid</a></li>
                                         <li><a href="explors-map-sidebar.html">Explors</a></li>
-                                    </ul>
-                                   -->    
+                                    </ul>    
                                  </li>
-                                 <!--
                                  <li><a href="explors-map-sidebar.html">Property</a></li>
                                  <li><a href="explors-map-sidebar.html">Find</a></li>
-                                 -->
                                  <li><a href="contact.html">Contact</a></li>
-                                <!--
                                 <li><a href="#">Pages</a>
                                     <ul class="submenu">
                                         <li><a href="login.html">login</a></li>
@@ -125,9 +113,8 @@
                                         <li><a href="contact.html">contact</a></li>
                                     </ul> 
                                 </li>
-                                -->
                             </ul>
-                            <a href="https://forms.office.com/r/QYAM4tyN0H" class="btn-booking-start">Submit a Recipe</a>
+                            <a href="#" class="btn-booking-start">Booking Now</a>
                         </nav>
                     </div> <!-- /. col-md-9 d-none d-lg-block -->
 
@@ -140,54 +127,303 @@
     </header>
     <!-- header section end -->
 
-    <!-- about us section start -->
-    <section class="about-us-wrapper section-padding" style="background-image: url('assets/img/about_bg.png')">
+    <!-- breadcrumb section start -->
+
+    <!-- breadcrumb section end -->
+    <!-- deatils nav bar section start -->
+    <div class="single-details-navbar">
         <div class="container">
             <div class="row">
-                <div class="col-lg-6 col-md-12 col-sm-12">
-                    <div class="about-us-content-left">
-                        <h2>Molakhia</h2>
-                    <p> 
-
-Country: Lebanon
-
-Alternative Name: Molokhia
-
-Ingredients: -2 packages of frozen Molokhia (minced or leaves)
--5 fresh garlic, minced
--1 bunch of chopped cilantro
--1 package of chicken breast with or without bones
--olive oil 
--salt
--pepper
--lemon
-
-Recipe: "Take olive oil and put in pot. Fry minced garlic with the chicken, salt and pepper. While you are browning the meat, make sure to have a pot of boiling water on the side. Once the chicken is browned add the cilantro and leaves some for the broth. Stir fry for another minute or two. Then add the frozen molokhia and pour the boiling hot water till it covers it. Then add the rest of the cilantro. Boil and then cover letting it simmer on low for about 35 mins or so. You will see the leaves not be bright anymore but cooked. Add salt as needed. Squeeze one fresh lemon. 
-
-Serve with buttery basmati rice with vermicelli noodles."
-
-Source: Mariam Masri
-<br/>   </li>
-                    
+                <div class="col-lg-7 col-md-4 col-6 ">
+                    <nav class="details-nav navbar navbar-expand-lg">
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#detailsnav">
+                            <i class="fas fa-bars"></i>
+                        </button>
+                       <div class="collapse navbar-collapse justify-content-start" id="detailsnav">
+                          <ul class="navbar-nav">
+                            <a href="#des-box">Description</a>
+                            <a href="#photo-box">Photos</a>
+                            <a href="#map-box">Maps</a>
+                            <a href="#video-box">Video</a>
+                            <a href="#menu-price">Menu Prices</a>
+                            <a href="#review-box">Reviews</a>
+                          </ul>
+                       </div>
+                    </nav>
+                </div>
+                <div class="col-lg-5 col-md-8 col-6">
+                    <div class="social-link-share">
+                        <ul>
+                            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                            <li><a href="#"><i class="fab fa-dribbble"></i></a></li>
                         </ul>
-                        <a href="#" class="btn-button">About Us</a>
                     </div>
                 </div>
-                <div class="col-lg-6 col-md-12 col-sm-12 d-none d-lg-block">
-                    <div class="about-us-gallery-section row d-flex align-items-center">
-                        <div class="col-md-5 small-size text-right">
-                            <img src="assets/img/photos/BRK001.jpg" alt="listico">
-                            <img src="assets/img/photos/BSB002.jpg" alt="listico">
+            </div>
+        </div>
+    </div>
+    <!-- deatils nav bar section end -->
+
+    <!-- single deatils content wrapper start -->
+    <section class="single-details-box-section section-padding page-bg">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-sm-12">
+                    <div class="single-content-box-area">
+                        <div class="description_box box" id="des-box">
+                            <h3>Description</h3>
+                            <p>ommodo consequat. Duis aute irure dolor in reprehenderit in ptate velit se cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate quas molestias. 
+                            numquam magnam dolorum consequatur, omnis eius. Iste nam dolore vero suscipit atque tempora a libero, consequuntur, aperiam odit dicta!</p>
                         </div>
-                        <div class="col-md-7">
-                            <img src="assets/img/photos/SV001.jpeg" alt="listico">
+                        <div class="photos_box box" id="photo-box">
+                            <h3>Photos</h3>
+                            <div class="photo-gallery">
+                                <div class="single-g-slide">
+                                    <img src="assets/img/gallery/gallery1.jpg" alt="">
+                                </div>
+                                <div class="single-g-slide">
+                                    <img src="assets/img/gallery/gallery2.jpg" alt="">
+                                </div>
+                                <div class="single-g-slide">
+                                    <img src="assets/img/gallery/gallery3.jpg" alt="">
+                                </div>
+                                <div class="single-g-slide">
+                                    <img src="assets/img/gallery/gallery4.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="gallery_nav">
+                                <div class="single-gallery-img">
+                                    <img src="assets/img/gallery/gn1.jpg" alt="">
+                                </div>
+                                <div class="single-gallery-img">
+                                    <img src="assets/img/gallery/gn2.jpg" alt="">
+                                </div>
+                                <div class="single-gallery-img">
+                                    <img src="assets/img/gallery/gn3.jpg" alt="">
+                                </div>
+                                <div class="single-gallery-img">
+                                    <img src="assets/img/gallery/gn4.jpg" alt="">
+                                </div>
+                            </div>
                         </div>
+                        <div class="map_box box" id="map-box">
+                            <h3>Lacation</h3>
+                            <div class="map-wrap">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d58400.47931449054!2d90.40927917566997!3d23.817533751206252!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sBars!5e0!3m2!1sen!2sbd!4v1562019287484!5m2!1sen!2sbd"  style="border:0" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                        <div class="video_box box" id="video-box">
+                            <h3>Video</h3>
+                            <div class="video-wrap">
+                                <iframe src="https://www.youtube.com/embed/uXyy7lgDj9k" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                        <div class="menu_price box" id="menu-price">
+                            <h3>Menu Price</h3>
+                            <div class="menu-item-price">
+                                <ul>
+                                    <li>Beautiful City Hostel & Hotel <span>$80</span></li>
+                                    <li>Children World of Adventures <span>$60</span></li>
+                                    <li>Restaurant De La Marne <span>$40</span></li>
+                                    <li>Beautiful City Hostel & Hotel <span>$80</span></li>
+                                    <li>Children World of Adventures <span>$60</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="review_comment_box" id="review-box">
+                            <form action="#" class="row">
+                                <div class="col-lg-6 col-12">
+                                    <div class="review_box">
+                                        <h3>Reviews</h3>
+                                        <ul>
+                                            <li>
+                                                <div class="rating"></div>
+                                                Excellent
+                                            </li>
+                                            <li>
+                                                <div class="rating"></div>
+                                                average
+                                            </li>
+                                            <li>
+                                                <div class="rating"></div>
+                                                low
+                                            </li>
+                                            <li>
+                                                <div class="rating"></div>
+                                                poor
+                                            </li>
+                                            <li>
+                                                <div class="rating"></div>
+                                                sad
+                                            </li>
+                                        </ul>
+                                        <input type="checkbox"> I agree to your policy
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-12">
+                                    <div class="comment_box">
+                                        <h3>Reviews</h3>
+                                        <input type="text" placeholder="name*">
+                                        <input type="text" placeholder="email*">
+                                        <textarea name="message" placeholder="message"></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <button class="btn-submit" type="submit">Submit Reviews</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-12">
+                    <div class="single-sidebar-widgets">
+                        <div class="single-widgets widgets box">
+                            <h3>Listing Amenities</h3>
+                            <ul>
+                                <li><a href="#">Accepts Credit Cards</a></li>
+                                <li><a href="#">Bike Parking</a></li>
+                                <li><a href="#">Coupons</a></li>
+                                <li><a href="#">Outdoor Seating</a></li>
+                                <li><a href="#">Reservations</a></li>
+                                <li><a href="#">Outdoor</a></li>
+                            </ul>
+                        </div><!-- single widget end -->
+                        <div class="single-widgets widgets box market-time">
+                            <h3>Today Open</h3>
+                            <ul>
+                                <li>Monday <span>03:00 - 22:00</span></li>
+                                <li>Tuesday <span>03:00 - 22:00</span></li>
+                                <li>Wednesday <span>03:00 - 22:00</span></li>
+                                <li>Thursday <span>03:00 - 22:00</span></li>
+                                <li>Friday <span>03:00 - 22:00</span></li>
+                                <li>Saturday <span>hap day</span></li>
+                                <li>sunday <span>Hollidays</span></li>
+                            </ul>
+                        </div><!-- single widget end -->
+                        <div class="single-widgets widgets box">
+                            <h3>Business Info</h3>
+                            <div class="g-map">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d116765.49789143789!2d90.28748999112247!3d23.85691014031508!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sHotels!5e0!3m2!1sen!2sbd!4v1562018865814!5m2!1sen!2sbd"  style="border:0" allowfullscreen></iframe>
+                            </div>
+                            <ul>
+                                <li><i class="far fa-map"></i>1546 77th St, Flushing, NY</li>
+                                <li><i class="far fa-envelope"></i>listing-business@gmail.com</li>
+                                <li><i class="fas fa-phone"></i>+49 73526 1235</li>
+                            </ul>
+                        </div><!-- single widget end -->
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <!-- about us section end -->
+    <!-- single deatils content wrapper end -->
+
+    <!-- footer section wrapper start -->
+    <footer class="footer-section">
+        <div class="footer-widgets-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-3 col-md-6 col-lg-3 col-sm-12">
+                        <div class="single-footer-widget">
+                            <div class="widget-title">
+                                <h4>About US</h4>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, sectetur adipisicing elit, sed do eiusmod mpor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, uis nostrud exercitation</p>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-3 col-md-6 col-lg-3 col-sm-12">
+                        <div class="single-footer-widget">
+                            <div class="widget-title">
+                                <h4>Address</h4>
+                            </div>
+                            <p><strong>REALITY 
+                                
+                        </strong>
+                                142 West newton, NY 19088 <br>
+                                <strong>United States</strong>
+                                +101 (235) 222 3353
+                                info@psdexpert.com</p>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-3 col-md-6 col-lg-3 col-sm-12">
+                        <div class="single-footer-widget">
+                            <div class="widget-title">
+                                <h4>Categories</h4>
+                            </div>
+                            <div class="widget-cats row">
+                                <ul class="col-12 col-md-6">
+                                    <li><a href="#">Reviews</a></li>
+                                    <li><a href="#">Bookmark</a></li>
+                                    <li><a href="#">Bookings</a></li>
+                                    <li><a href="#">Contact</a></li>
+                                    <li><a href="#">Shopping</a></li>
+                                    <li><a href="#">My Profile</a></li>
+                                </ul>
+                                <ul class="col-12 col-md-6">
+                                    <li><a href="#">Restaurant</a></li>
+                                    <li><a href="#">Cafe & Bar</a></li>
+                                    <li><a href="#">Hotel</a></li>
+                                    <li><a href="#">My Listings</a></li>
+                                    <li><a href="#">add Listings</a></li>
+                                    <li><a href="#">Spa & Beauty</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-3 col-md-6 col-lg-3 col-sm-12">
+                        <div class="single-footer-widget">
+                            <div class="widget-title">
+                                <h4>Subscribe</h4>
+                            </div>
+                            <div class="subscribe-box">
+                                <form action="#">
+                                    <input type="text" placeholder="Email address">
+                                    <button type="submit">send</button>
+                                </form>
+                            </div>
+                            <div class="social-icons">
+                                <span>Follow us</span>
+                                <ul>
+                                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-dribbble"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-6 col-sm-12">
+                        <span>&copy;2019 rights reserved - Designed and Developed by ModinaTheme</span>
+                    </div>
+                    <div class="col-xl-6 col-sm-12">
+                        <div class="footer-menu">
+                            <ul>
+                                <li><a href="#">Home</a></li>
+                                <li><a href="#">About</a></li>
+                                <li><a href="#">Listings</a></li>
+                                <li><a href="#">Help</a></li>
+                                <li><a href="#">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- footer section wrapper end -->
+
 
     <!--  ALl JS Plugins
     ====================================== -->
@@ -200,9 +436,9 @@ Source: Mariam Masri
     <script src="assets/js/wow.min.js"></script>
     <script src="assets/js/owl.carousel.min.js"></script>
     <script src="assets/js/slick.min.js"></script>
-    <script src="assets/js/ion.rangeSlider.min.js"></script>
     <script src="assets/js/rater.min.js"></script>
-    <script src="assets/js/meanmenu.min.js"></script>
+    <script src="assets/js/ion.rangeSlider.min.js"></script>
+    <script src="assets/js/meanmenu.min.js"></script>    
     <script src="assets/js/main.js"></script>
 </body>
 </html>
