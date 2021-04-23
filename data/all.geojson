@@ -12,7 +12,8 @@
 {"type": "Feature", "id": 8, "properties": {"index": "9","name": "Basbousa/Revani", "image_url": "https://i2.milimaj.com/i/milliyet/75/0x410/5eb53e0c55428709e8b47a7f.jpg", "restaurant":"a","restaurant_url":"a", "by":"a", "tags": ["Middle-eastern","Dessert"]}, "geometry": { "type": "Point","coordinates": [37.8719963, 32.4844015] } },
 {"type": "Feature", "id": 9, "properties": {"index": "10","name": "Mantu", "image_url": "assets/img/photos/manti.jpeg", "restaurant":"a","restaurant_url":"a", "by":"a", "tags": ["Middle-eastern", "dinner"]}, "geometry": { "type": "Point","coordinates": [69.1776838, 34.5260109] } },
 {"type": "Feature", "id": 10, "properties": {"index": "11","name": "Lentils", "image_url": "assets/img/photos/lentils.jpeg", "restaurant":"a","restaurant_url":"a", "by":"a", "tags": ["Middle-eastern", "dinner"]}, "geometry": { "type": "Point","coordinates": [84.1240, 28.3949] } },
-{"type": "Feature", "id": 11, "properties": {"index": "12","name": "Falafel", "image_url": "assets/img/photos/foodpic3.jpeg", "restaurant":"a","restaurant_url":"a", "by":"a", "tags": ["Middle-eastern", "breakfast", "dinner"]}, "geometry": { "type": "Point","coordinates": [31.963158, 35.930359] } }
+{"type": "Feature", "id": 11, "properties": {"index": "12","name": "Falafel", "image_url": "assets/img/photos/foodpic3.jpeg", "restaurant":"a","restaurant_url":"a", "by":"a", "tags": ["Middle-eastern", "breakfast", "dinner"]}, "geometry": { "type": "Point","coordinates": [31.963158, 35.930359] } },
+{"type": "Feature", "id": 12, "properties": {"index": "13","name": "Stuffed Vegetables", "image_url": "assets/img/photos/SV003.jpg", "restaurant":"a","restaurant_url":"a", "by":"a", "tags": ["Middle-eastern", "dinner"]}, "geometry": { "type": "Point","coordinates": [30.033333, 31.233334] } }
 ]}
 
 
