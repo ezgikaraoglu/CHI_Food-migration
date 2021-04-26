@@ -1,1 +1,14 @@
+{
+"type": "FeatureCollection", 
+"features": [
+{"type": "Feature", "id": 0, "properties": {"AlternativeName": "Hummus","Ingredients": "For the Roasted Beets\n- 2 lbs (1kg) beets\n- 1 tbsp olive oil\n- salt and pepper to taste\n- For the Mutabbal Shamandar\n- 1 juiced lemon\n- 2-4 clobes of minced garlic or 2-3 tsp of toum\n- 1 cup tahini\n- 1 cup of olive oil+more for serving\n- 1 tsp of salt\n- 1 tsp of ground white pepper\n- Optional Garnishes\n- pomegranate arils\n- fresh herbs\nFor the yoghurt bottom\n- yoghurt \n- or laban (yogurt)\n-","Recipe": For the Roasted Beets:
+Preheat your oven to 450°F (230°C). Line a baking sheet or pan with foil.
+Using a paring knife, peel your beets. If they are very large, cut into quarters. Place in your baking pan and drizzle with a little olive oil, and season with salt and pepper.
+Roast in the oven for 45 minutes to 2 hours (depending on beet size). You'll know when they're done when a fork inserted into the beet glides in smoothly.
+Remove from the oven and allow to cool to room temperature, about thirty minutes.
 
+Making the Mutabbal Shamandar:
+In the bowl of your food processor, add your lemon juice and garlic. Pulse until mostly combined. Allow the garlic to sit in the lemon and mellow for about 10 minutes, then add your tahini. Blend thoroughly until combined, then add your olive oil.
+Once this is blended, add your beets and pulse to the desired consistency (some people prefer it chunky, though I prefer this dip smooth). Add salt and pepper, blend and check the taste. Adjust salt and pepper if needed.
+Garnish with more olive oil. You can also garnish with pomegranate arils, laban (yogurt), or fresh herbs if desired.", "Source": "The Elegant Economist", "WebLink": "http://https/theeleganteconomist.com/2019/09/09/mutabbal-shamandar-beet-tahini-dip/", "PhotoLink": "assets/img/photos/hummus zaatar bread.jpeg"}, "geometry": { "type": "Point","coordinates": [34.7333334, 36.7166667] } }
+]}
