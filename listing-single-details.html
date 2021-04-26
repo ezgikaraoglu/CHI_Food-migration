@@ -58,7 +58,8 @@
 				document.getElementById("dish-ingredients").textContent = feature.properties.Ingredients;
 				document.getElementById("dish-recipe").textContent = feature.properties.Recipe;
 				document.getElementById("dish-img").src = feature.properties.PhotoLink;
-				document.getElementById("dish-source").textContent = "Source:"+ feature.properties.Source;
+				document.getElementById("dish-source").textContent = "Source: "+ feature.properties.Source;
+				document.getElementById("dish-source").href = feature.properties.WebLink;
 			})
 		})
 	})
@@ -175,7 +176,7 @@
 						<h6>Recipe:</h6> 
 						<pre id="dish-recipe"> 
 						</pre>
-						<p id="dish-source"> From: </p>
+						<a id="dish-source" href="#"> From: </a>
 						<!--
                         <a href="#" class="btn-button">About Us</a>
                         -->
