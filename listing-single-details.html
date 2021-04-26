@@ -42,6 +42,27 @@
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script>
+    $(document).ready(function () {
+		const queryString = window.location.search;
+		const urlParams = new URLSearchParams(queryString);
+		const dishName = urlParams.get('dish');
+		document.getElementById("dish-name").textContent = dishName;
+		console.log(dishName)
+		$.getJSON("./data/"+dishName+".geojson",function(data){
+			console.log('here!')
+			data.features.forEach(feature => {
+				console.log(feature)
+				document.getElementById("dish-name").textContent = dishName +" / " + feature.properties.AlternativeName;
+				document.getElementById("dish-ingredients").textContent = feature.properties.Ingredients;
+				document.getElementById("dish-recipe").textContent = feature.properties.Recipe;
+				document.getElementById("dish-img").src = feature.properties.PhotoLink;
+				document.getElementById("dish-source").textContent = "Source:"+ feature.properties.Source;
+			})
+		})
+	})
+    </script>
 </head>
 
 <body class="theme_body">
@@ -146,44 +167,33 @@
             <div class="row">
                 <div class="col-lg-6 col-md-12 col-sm-12">
                     <div class="about-us-content-left">
-                        <h2>Molakhia</h2>
-                    <p> 
-
-Country: Lebanon
-
-Alternative Name: Molokhia
-
-Ingredients: 
--2 packages of frozen Molokhia (minced or leaves)
--5 fresh garlic, minced
--1 bunch of chopped cilantro
--1 package of chicken breast with or without bones
--olive oil 
--salt
--pepper
--lemon
-
-Recipe: "Take olive oil and put in pot. Fry minced garlic with the chicken, salt and pepper. While you are browning the meat, make sure to have a pot of boiling water on the side. Once the chicken is browned add the cilantro and leaves some for the broth. Stir fry for another minute or two. Then add the frozen molokhia and pour the boiling hot water till it covers it. Then add the rest of the cilantro. Boil and then cover letting it simmer on low for about 35 mins or so. You will see the leaves not be bright anymore but cooked. Add salt as needed. Squeeze one fresh lemon. 
-
-Serve with buttery basmati rice with vermicelli noodles."
-
-Source: Mariam Masri
-<br/>   </li>
-                    
-                        </ul>
+                        <h2 id="dish-name">Molakhia</h2>
+                        <h4 id="dish-country">Country: Lebanon</h4>
+                        <h6>Ingredients:</h6> 
+						<pre id="dish-ingredients"> 
+						</pre>
+						<h6>Recipe:</h6> 
+						<pre id="dish-recipe"> 
+						</pre>
+						<p id="dish-source"> From: </p>
+						<!--
                         <a href="#" class="btn-button">About Us</a>
+                        -->
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-12 col-sm-12 d-none d-lg-block">
+					<!--
                     <div class="about-us-gallery-section row d-flex align-items-center">
                         <div class="col-md-5 small-size text-right">
                             <img src= "https://tr.wikipedia.org/wiki/Dosya:Molokheiya02.jpg" alt="listico">
                             <img src= "https://tr.wikipedia.org/wiki/Dosya:Lebanesemulukhiyih.JPG" alt="listico">
                         </div>
                         <div class="col-md-7">
-                            <img src= "https://en.wikipedia.org/wiki/File:Molokheya_Egypt,_2012.JPG" alt="listico">
+                            <img src= "https://upload.wikimedia.org/wikipedia/commons/7/72/Molokheya_Egypt%2C_2012.JPG" alt="listico">
                         </div>
                     </div>
+                    -->
+                    <img id="dish-img" src= "https://tr.wikipedia.org/wiki/Dosya:Molokheiya02.jpg" alt="listico">
                 </div>
             </div>
         </div>
