@@ -48,11 +48,66 @@
 		const queryString = window.location.search;
 		const urlParams = new URLSearchParams(queryString);
 		const dishName = urlParams.get('dish');
-		document.getElementById("dish-name").textContent = dishName;
-		console.log(dishName)
+		//document.getElementById("dish-name").textContent = dishName;
+		//console.log(dishName)
+		var counter = 0;
 		$.getJSON("./data/"+dishName+".geojson",function(data){
 			console.log('here!')
 			data.features.forEach(feature => {
+				section = document.createElement("section");
+				section.classList.add("about-us-wrapper");
+				section.classList.add("section-padding");
+				if(counter % 2 == 0) {
+					section.setAttribute("style","background-image:url('assets/img/about_bg.png');");
+				} else {
+					section.setAttribute("style","background-color:#f9f9f9;");
+				}
+				container = document.createElement("div");
+				container.classList.add("container");
+				row = document.createElement("div");
+				row.classList.add("row");
+				col1 = document.createElement("div");
+				col1.classList.add("col-lg-6");
+				col1.classList.add("col-md-12");
+				col1.classList.add("col-sm-12");
+				text1 = document.createElement("div");
+				text1.classList.add("about-us-content-left");
+				name1 = document.createElement("h2");
+				name1.textContent = dishName +" / " + feature.properties.AlternativeName;
+				text1.appendChild(name1);
+				ingredientsTitle = document.createElement("h6");
+				ingredientsTitle.textContent = "Ingredients:";
+				text1.appendChild(ingredientsTitle);
+				ingredients = document.createElement("pre");
+				ingredients.textContent = feature.properties.Ingredients;
+				text1.appendChild(ingredients);
+				recipeTitle = document.createElement("h6");
+				recipeTitle.textContent = "Recipe:";
+				text1.appendChild(recipeTitle);
+				recipe = document.createElement("pre");
+				recipe.textContent = feature.properties.Recipe;
+				text1.appendChild(recipe);
+				source = document.createElement("a");
+				source.textContent = "Source: "+ feature.properties.Source;
+				source.href = feature.properties.WebLink;
+				text1.appendChild(source);
+				col1.appendChild(text1);
+				col2 = document.createElement("div");
+				col2.classList.add("col-lg-6");
+				col2.classList.add("col-md-12");
+				col2.classList.add("col-sm-12");
+				col2.classList.add("d-none");
+				col2.classList.add("d-lg-block");
+				img = document.createElement("img");
+				img.src = feature.properties.PhotoLink;
+				col2.appendChild(img);
+				row.appendChild(col1);
+				row.appendChild(col2);
+				container.appendChild(row);
+				section.appendChild(container);
+				document.getElementById("contents").appendChild(section);
+				counter += 1;
+				/*
 				console.log(feature)
 				document.getElementById("dish-name").textContent = dishName +" / " + feature.properties.AlternativeName;
 				document.getElementById("dish-ingredients").textContent = feature.properties.Ingredients;
@@ -60,12 +115,13 @@
 				document.getElementById("dish-img").src = feature.properties.PhotoLink;
 				document.getElementById("dish-source").textContent = "Source: "+ feature.properties.Source;
 				document.getElementById("dish-source").href = feature.properties.WebLink;
+				*/
 			})
 		})
 	})
     </script>
 </head>
-
+            
 <body class="theme_body">
     
     <!-- preloader element started -->
@@ -163,6 +219,8 @@
     <!-- header section end -->
 
     <!-- about us section start -->
+    <div id="contents">
+	<!--
     <section class="about-us-wrapper section-padding" style="background-image: url('assets/img/about_bg.png')">
         <div class="container">
             <div class="row">
@@ -177,28 +235,16 @@
 						<pre id="dish-recipe"> 
 						</pre>
 						<a id="dish-source" href="#"> From: </a>
-						<!--
-                        <a href="#" class="btn-button">About Us</a>
-                        -->
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-12 col-sm-12 d-none d-lg-block">
-					<!--
-                    <div class="about-us-gallery-section row d-flex align-items-center">
-                        <div class="col-md-5 small-size text-right">
-                            <img src= "https://tr.wikipedia.org/wiki/Dosya:Molokheiya02.jpg" alt="listico">
-                            <img src= "https://tr.wikipedia.org/wiki/Dosya:Lebanesemulukhiyih.JPG" alt="listico">
-                        </div>
-                        <div class="col-md-7">
-                            <img src= "https://upload.wikimedia.org/wikipedia/commons/7/72/Molokheya_Egypt%2C_2012.JPG" alt="listico">
-                        </div>
-                    </div>
-                    -->
                     <img id="dish-img" src= "https://tr.wikipedia.org/wiki/Dosya:Molokheiya02.jpg" alt="listico">
                 </div>
             </div>
         </div>
     </section>
+    -->
+    </div>
     <!-- about us section end -->
 
     <!--  ALl JS Plugins

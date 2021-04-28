@@ -120,7 +120,7 @@
 				document.getElementById("tagList").appendChild(newTag);
 			}
 			var tag_lst = new Set();
-			var map = L.map('map').setView([40, -20], 2);
+			var map = L.map('map').setView([40, 30], 2);
 			markersLayer = new L.FeatureGroup();
 		    var itemMarkers = new L.FeatureGroup();
 			var baselayer = L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -190,9 +190,10 @@
 						    <div class="item-feedback">
                                 <ul>
                                     <li><i class="fas fa-globe"></i></li>
-                                    <li><i class="fas fa-globe"></i></li>
                                 </ul>
-                                2 versions
+                                <span id="ver${feature.properties.index}">
+									x Recipes
+                                </span>
                             </div>`
 					var itemDetails = document.createElement("div");
 					itemDetails.className = "item-details"
@@ -227,6 +228,8 @@
 					   .setContent('<font size="+2">'+feature.properties.name+'</font>'+'<br/><img src="'+feature.properties.image_url+'" style="  width: 200px; height: 100px; object-fit: contain;" onerror="this.style.display=\'none\'"/>')
 					   .openOn(map)
 					});
+					var featureGeo = "./data/"+feature.properties.name+".geojson";
+					$.getJSON(featureGeo,function(data){console.log("ver"+feature.properties.index); document.getElementById("ver"+feature.properties.index).textContent = data.features.length+" Recipes"});
 					return marker;
 			   }
 			   }).addTo(map);
@@ -320,7 +323,7 @@
                                  <li><a href="explors-map-sidebar.html">Property</a></li>
                                  <li><a href="explors-map-sidebar.html">Find</a></li>
                                  -->
-                                 <li><a href="contact.html">Contact</a></li>
+                                 <li><a href="credits.html">credits</a></li>
                                 <!--
                                 <li><a href="#">Pages</a>
                                     <ul class="submenu">
@@ -349,7 +352,7 @@
     <!-- breadcrumb section start -->
     <div class="banner-section">
 			<div class="container">
-				<div id="map" style="margin-left: auto; margin-right: auto;"></div>
+				<div id="map" style="margin-left: auto; margin-right: auto;" data-recipes="0"></div>
 			</div>
     </div>
     <!-- breadcrumb section end -->
